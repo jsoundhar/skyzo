@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Client Works</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s ease-out;
+      animation-fill-mode: both;
+    }
+  </style>
+</head>
+<body class="bg-black">
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 text-white text-center pb-12">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">OUR CLIENT WORKS</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        Our best work showcased in a style that fits your feed — quick, vertical, and engaging.
+      </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+
+        <!-- Video 1 -->
+        <div class="relative group animate-fadeInUp" style="animation-delay: 0.1s;">
+          <div class="relative w-full max-w-[300px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl border-4 border-indigo-500/30 hover:border-indigo-500/60 transition-all duration-300 hover:scale-105 hover:shadow-indigo-500/20">
+            <video class="w-full h-full object-cover" autoplay muted loop playsinline id="video1">
+              <source src="videos/video1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <button onclick="toggleMute('video1', 'muteBtn1')" id="muteBtn1" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/70 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/90 transition-all duration-200 hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 5 6 9H2v6h4l5 4V5z"/>
+                <line x1="22" y1="9" x2="16" y2="15"/>
+                <line x1="16" y1="9" x2="22" y2="15"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="relative group animate-fadeInUp" style="animation-delay: 0.3s;">
+          <div class="relative w-full max-w-[300px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl border-4 border-indigo-500/30 hover:border-indigo-500/60 transition-all duration-300 hover:scale-105 hover:shadow-indigo-500/20">
+            <video class="w-full h-full object-cover" autoplay muted loop playsinline id="video2">
+              <source src="videos/smilescape_dental.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <button onclick="toggleMute('video2', 'muteBtn2')" id="muteBtn2" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/70 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/90 transition-all duration-200 hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 5 6 9H2v6h4l5 4V5z"/>
+                <line x1="22" y1="9" x2="16" y2="15"/>
+                <line x1="16" y1="9" x2="22" y2="15"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="relative group animate-fadeInUp" style="animation-delay: 0.5s;">
+          <div class="relative w-full max-w-[300px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl border-4 border-indigo-500/30 hover:border-indigo-500/60 transition-all duration-300 hover:scale-105 hover:shadow-indigo-500/20">
+            <video class="w-full h-full object-cover" autoplay muted loop playsinline id="video3">
+              <source src="videos/video3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <button onclick="toggleMute('video3', 'muteBtn3')" id="muteBtn3" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/70 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/90 transition-all duration-200 hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 5 6 9H2v6h4l5 4V5z"/>
+                <line x1="22" y1="9" x2="16" y2="15"/>
+                <line x1="16" y1="9" x2="22" y2="15"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMute(videoId, buttonId) {
+      const video = document.getElementById(videoId);
+      const button = document.getElementById(buttonId);
+      
+      video.muted = !video.muted;
+      
+      if (video.muted) {
+        button.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 5 6 9H2v6h4l5 4V5z"/>
+            <line x1="22" y1="9" x2="16" y2="15"/>
+            <line x1="16" y1="9" x2="22" y2="15"/>
+          </svg>
+        `;
+      } else {
+        button.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 5 6 9H2v6h4l5 4V5z"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+          </svg>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
