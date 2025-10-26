@@ -8763,7 +8763,7 @@ a.whatsapp .icon-whatsapp {
         max-width: 1200px;
         margin: 0 auto;
         background: rgba(255, 255, 255, 0.05);
-        border: 2px solid rgba(139, 92, 246, 0.3);
+        border: 2px solid rgba(255, 193, 7, 0.3);
         border-radius: 20px;
         padding: 50px 40px;
         display: flex;
@@ -8794,7 +8794,7 @@ a.whatsapp .icon-whatsapp {
       .stat-number {
         font-size: 64px;
         font-weight: 700;
-        background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+        background: linear-gradient(135deg, #ffc107 0%, #a87f05 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
